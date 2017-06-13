@@ -11,6 +11,7 @@
     <!-- https://wohlwtot.github.io/wc-instagram/ -->
 </head>
 <body>
+
     <header>
         <div class="inner">
         <div class="header__logo">Instagram</div>
@@ -33,7 +34,7 @@
             <div class="profile__info">
                 <h2>Username</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione veritatis vero aute stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff stuff </p>
-                <a href="#">Google</a>
+                <a class="link" href="http://www.google.com">Google</a>
                 <ul class="profile__meta">
                     <li>The first bullet</li>
                     <li>The second bullet</li>
@@ -70,7 +71,22 @@
             <img src="http://unsplash.it/300?image=599" alt="">
             <span class="image__cover">View Image</span>
             </a>
+            <a href="" class="image">
+            <img src="http://unsplash.it/300?image=699" alt="">
+            <span class="image__cover">View Image</span>
+            </a>
         </div>
     </div>
+    <script>
+        window.addEventListener('scroll', function(){
+        var distance = window.pageYOffset || document.documentElement.scrollTop
+        var header = document.querySelector('header')
+        if(distance > 200){
+            header.classList.add('header--small')
+        } else {
+            header.classList.remove('header--small')
+        }
+        })
+    </script>
 </body>
 </html>

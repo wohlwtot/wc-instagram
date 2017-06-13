@@ -16,7 +16,16 @@ body {
     justify-content: space-between;
     align-items: center; 
 }
-
+.link {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: x-large;
+}
+.link:hover {
+    text-align: right;
+    font-family: cursive;
+    color: red;
+    float: right;
+}
 .images .inner {
     /* flex-wrap: wrap;
        justify-content: space-around; */
@@ -57,6 +66,15 @@ body {
 header {
     background: lightyellow;
     padding: 1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;  /* priority #1 */
+    transition: padding .5s;
+}
+.header--small {
+    padding: 0 0;
 }
 .header__logo {
     font-size: 2em;
@@ -64,6 +82,9 @@ header {
 }
 
 /* Profile Area Styles */
+.profile {
+    margin-top: 80px;
+}
 .profile__image {
     border: 4px solid greenyellow;
     border-radius: 50%; /* convert picture to circle */
@@ -71,6 +92,7 @@ header {
     width: 200px;
     height: 200px;
     flex: 0 0 200px; /* flex: grow-ratio shrink-ratio original-size */
+    
 }
 .profile__info {
     flex: 1 1 400px;
