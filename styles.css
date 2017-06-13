@@ -1,13 +1,9 @@
-/* Reset issue where padding isn't included in dimentions of an element */
-
 html {
     box-sizing: border-box;
 }
-
 *, *:before, *:after {
     box-sizing: inherit;
 }
-
 body {
     background: #dbd9d9;
     margin: 0 auto;
@@ -21,6 +17,14 @@ body {
     align-items: center; 
     /*height: 60px;*/
 }
+.images .inner {
+    /* flex-wrap: wrap;
+    justify-content: space-around; */
+    display: grid; /* do not inherit display: flex; grid is very new and works with select/updated browsers only*/
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    max-width: 100%;
+}
 header {
     background: lightyellow;
     padding: 1em 0;
@@ -29,15 +33,21 @@ header {
     font-size: 2em;
     font-family: 'Cookie', cursive;
 }
+
 /* Profile Area Styles */
 .profile__image {
     border: 4px solid greenyellow;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 50%; /* convert picture to circle */
+    overflow: hidden; /* hide overflow from circle picture */
     width: 200px;
     height: 200px;
+    flex: 0 0 200px; /* flex: grow-ratio shrink-ratio original-size */
 }
-
+.profile__info {
+    flex: 1 1 400px;
+    margin-left: 2em;
+    font-family: 'Mogra', cursive;
+}
 .button {
     color: #4090db;
     text-decoration: none;
@@ -49,4 +59,15 @@ header {
     color: white; 
     border-color: blue;
     padding: .5em 1em;
+}
+.profile__meta {
+    display: flex;
+    list-style: none;
+    flex-direction: row; /* default */
+    padding: 0;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.profile__meta li {
+    margin-right: 2em;
 }
