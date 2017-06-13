@@ -11,19 +11,24 @@ body {
 .inner {
     max-width: 960px;
     margin: 0 auto;
-    /*background-color: blue;*/   
+    /* background-color: blue; */   
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    /*height: 60px;*/
 }
+
 .images .inner {
     /* flex-wrap: wrap;
-    justify-content: space-around; */
-    display: grid; /* do not inherit display: flex; grid is very new and works with select/updated browsers only*/
+       justify-content: space-around; */
+
+    /* Do not inherit display: flex; grid is very new and works with select/updated browsers only */
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1em;
     max-width: 100%;
+
 }
 header {
     background: lightyellow;
