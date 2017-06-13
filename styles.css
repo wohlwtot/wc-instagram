@@ -127,3 +127,31 @@ header {
 img {
     max-width: 100%;
 }
+
+/* when screen falls bel0w 1000px */
+@media(max-width: 1000px) {
+    .inner {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+/* when screen falls bel0w 630px */
+@media(max-width: 630px) {
+    .images .inner {
+        -ms-grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .profile .inner {
+        flex-direction: column;
+    }
+    .profile__image {
+        width:100px;
+        height: 100px;
+        flex: 0 0 100px;
+    }
+    .profile__info {
+
+    }
+
+}
